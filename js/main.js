@@ -1,5 +1,9 @@
-function generateRandomDecimalInRangeFormatted(min, max, places) {
+const getRandomFloat = (min, max, places = 0) => {
     let value = (Math.random() * (max - min + 1)) + min;
-    return Number.parseFloat(value).toFixed(places);
+    return Number.parseFloat(value.toFixed(places));
 };
+
+const getRandomInteger = (min, max) => {
+    return getRandomFloat(min, max);
+}
 //источник: https://www.udacity.com/blog/2021/04/javascript-random-numbers.html
